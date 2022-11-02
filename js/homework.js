@@ -38,20 +38,38 @@ console.log(toCelcius(50));
 
 // class = User,
 // constructor (username, password)
-// add method to change usr password
+// add method to change user password
 // method should take in old password and new password
-// method then checks old password to se if its right or wrong
+// method then checks old password to see if its right or wrong
 // if old password is wrong new password is not created/ password is not reset
 // create an instance of new user then change their password
 
-// class User {
-//     constructor(username, password){
-//         this.username = username;
-//         this.password = password;
-//     }
-//     changePassword(oldPassword, newPassword)
+ class User {
+     constructor(username, password){
+         this.username = username;
+         this.password = password;
+     }
+     changePassword(oldPassword, newPassword){
+        if (oldPassword ===this.password){
+            this.password = newPassword;
+            console.log("Password has been updated");
+         } else {
+            console.log("Your password is incorrect");
+        }
+            }
 
-// }
+        }
+
+ let user1 = new User('dyanna', '12345');
+ let user2 = new User ('brian, codingtemple');
+
+ console.log(user1);
+ console.log(user2);
+
+ user1.changePassword('abc123', '123abc'); // Success, password updated
+ user2.changePassword('abc123', '123abc'); // Fail, password not updated
+
+
 
 
 
@@ -82,13 +100,13 @@ console.log(toCelcius(50));
 
 
 
-// const arrA = [-10, -3, 4, -2, 8, 9, -3];
-// function squareNegatives(arr){
-//     for (const i = 0; i <arr.length; i++)
-//         if (arr[i] , 0) {
-//             console.log(arr);
-//         }
+ const arrA = [-10, -3, 4, -2, 8, 9, -3];
+ function squareNegatives(arr){
+     for (const i = 0; i <arr.length; i++)
+         if (arr[i] , 0) {
+             console.log(arr);
+         }
 
 
-//     }
+     }
 
